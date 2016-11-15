@@ -15,8 +15,8 @@ public class TranslatorImplTest {
     @Test
     public void testNames() throws InvalidFormatException, FileNotFoundException {
 
-        File xlsxFile = new File("C:\\eea\\Reportnet\\AirQuality\\trunk\\xqueries\\labels.xlsx");
-        OPCPackage p = OPCPackage.open(xlsxFile.getPath(), PackageAccess.READ);
+        File xlsxFile = new File("/home/dev-gso/Desktop/AQD/labels.xlsx");
+        OPCPackage p = OPCPackage.open(xlsxFile, PackageAccess.READ);
         PrintStream out = new PrintStream(new FileOutputStream("output.xml", true));
         TranslatorImpl tr = new TranslatorImpl(p, out, 5);
         try {

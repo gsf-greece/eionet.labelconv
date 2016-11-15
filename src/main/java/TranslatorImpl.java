@@ -89,7 +89,7 @@ public class TranslatorImpl implements Translator {
 
             DataFormatter formatter = new DataFormatter();
             InputSource sheetSource = new InputSource(stream);
-            if (!sheetName.equals("Data flow G")) {
+            if (!sheetName.equals("Envelope Test")) {
                 //output.append("<" + sheetName + ">");
                 writer.writeElement(sheetName, "");
                 XMLReader reader = SAXHelper.newXMLReader();
